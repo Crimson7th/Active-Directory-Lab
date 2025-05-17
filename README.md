@@ -13,34 +13,19 @@ Language and Utilities Used
 Active Directory
 PowerShell
 Command Prompt (cmd.exe)
-Links
-https://www.vmware.com/go/getplayer-win (workstation trial version)
-https://www.vmware.com/go/getfusion (fusion trial version)
-https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022 (MS Server 2022)
-https://www.microsoft.com/en-in/evalcenter/download-windows-11-enterprise (Windows 11)
-Things to know before
-I'll tell you to make passwords sometimes with special char and sometimes with a simple password to create a good environment for next projects of vulnerability assessment and AD exploits.
-Program Walkthrough
+
 The topology of my active direcotory lab for this project -
 
-Drawing
+[Act](https://github.com/user-attachments/assets/fb3e770a-73ee-44ac-b2b8-2c7869b01d61)
 
-For the Virtual Machine that will be hosting my Domain Controller, I need two network adapters. I need the NAT that will use my host IP address from my home router and an internal network so that my DC can communicate with other Virtual Machines. For the internal network I will be using vnet0. Refer to the diagram at the beginning. How to create vnet0 and setup two networks in windows?
-
- add-virtual-network.mp4 
- add-multiple-network-adapter.mp4 
-First install Windows Server 2022 on the Virtual Machine with Server@@2022 for the administrator. First thing to do is install VMware tools to ease my copy-pasting and get resolution according to my window size. Now take a snapshot and before restarting I also rename this pc to MARVEL-DC to make this a Marvel thmemed AD Lab.
-
-image
-
-Now lets install and configure AD DS on our server. Follow the video tutorial.
+Created the domain controller and named it MARVEL.local
 
 Details used-
 Root domain name: MARVEL.local
-DSRM Password: Password@1
 NetBIOS doamin name: MARVEL
- setting-up-AD-.-DC.mp4 
 After restart the logon portal will look like this (MARVEL/ in front of our user)-
+
+--HERE--
 
 image
 
