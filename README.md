@@ -1,7 +1,7 @@
 # Active-Directory-Lab
 Active Directory Home Lab With Bulk User Creation
 Description
-This project is demonstration of creating an active directory home lab on Virtualbox. I will be creating a Domain Controller (DC) using Microsoft Server 2022 and a domain using Microsoft Windows 11 Enterprise. To simulate a large business environment I will create over 1000 users in Active Directory and proceed to log into those newly created accounts on the domain via internet. In this lab I'll need a Microsoft Server 2022 ISO, A Windows 11 Enterprise ISO, VMWare and a Powershell script
+This project is demonstration of creating an active directory home lab on Virtualbox. I will be creating a Domain Controller (DC) using Microsoft Server 2022 and a domain using Microsoft Windows 11 Enterprise. To simulate a large business environment I will create over 1000 users in Active Directory and proceed to log into those newly created accounts on the domain via internet. In this lab I'll need a Microsoft Server 2022 ISO, A Windows 11 Enterprise ISO, Virtualbox and a Powershell script
 
 Software Requirement
 Environment Used
@@ -12,7 +12,6 @@ Microsoft Windows 11 Enterprise
 Language and Utilities Used
 Active Directory
 PowerShell
-Command Prompt (cmd.exe)
 
 The topology of my active direcotory lab for this project -
 
@@ -26,34 +25,34 @@ Root domain name: MARVEL.local
 NetBIOS doamin name: MARVEL
 After restart the logon portal will look like this (MARVEL/ in front of our user)-
 
---HERE--
+![Act3](https://github.com/user-attachments/assets/5100585f-abeb-4888-ab35-52a22a2d126a)
 
-image
 
-Now lets setup Users on our server. If you are ever getting confused about the user and password just follow the topology. Also in this video we create a share so we enable the port 139 for SMB service as most organisation have to share files and they do it via SMB share on port 139 and we are trying to simulate that.
 
-Details used-
-username : password = fcastle:Password1, mmurdock:Password2, tstark:Morgan@2022, sqlservice:MYpassword!@#2023
-file share profile = SMB Share - Quick
-file share name = Micro
- adding-user-share.mp4 
-I forgot to record the part where i put the SQLService user password in its description which you can see is shown after I was finished creating users. I did this because many admins thinks that description can't be read by others which we'll show that its not true in our ActiveDirectoryAttacks.
+Now lets setup Users on our server. 
 
-Lets change few policies and permissions so that when we do ActiveDirectoryAttacks, we have several attack vectors to practice on.
+<br>
+<br>
 
- adding-policies.mp4 
-Lets take a snapshot here as we have done steps followed by TCM so if anything goes wrong we can turn back.
+![Act2](https://github.com/user-attachments/assets/31da5d8e-20d3-4e4a-a058-5d5f841191fc)
 
-Now lets login to domain specific Tony Stark account instead of Administrator in Server 2022 with credential (MARVEL\tstark : Morgan@2022)-
 
-image
+Now lets login to domain specific Tony Stark account instead of Administrator in Server 2022 with credential.
+<br>
+<br>
 
-Now lets install Remote Access with RAS and Routing server roles so our client computers can acess the internet via our DC and configure it with NAT service on our vnet0 network-
+![Act4](https://github.com/user-attachments/assets/c446dd94-d3b4-4169-92c0-9f0414cb55a2)
 
- setting-RAS-with-NAT-config.mp4 
-After config It started showing error & asking to restart so I did and it fixed the problem. Next step is to setup DHCP roles to our AD environment-
 
- installing-DHCP.mp4 
+![Act5](https://github.com/user-attachments/assets/8b4c79f6-ea31-421b-b2e5-dcf444892600)
+<br>
+<br>
+<br>
+<br>
+![Act8](https://github.com/user-attachments/assets/85203b37-8a4e-4540-984f-5a09de550c24)
+
+
+
 lets begin bulk user addition with our script. I have also added an additional script to add users using a name.txt file. Note that I pasted the code from main machine to server as its advised now to use Browser on the server machine-
 
  bulk-user-script.mp4 
