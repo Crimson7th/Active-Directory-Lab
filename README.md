@@ -16,7 +16,7 @@ Command Prompt (cmd.exe)
 
 The topology of my active direcotory lab for this project -
 
-[Act](https://github.com/user-attachments/assets/fb3e770a-73ee-44ac-b2b8-2c7869b01d61)
+(https://github.com/user-attachments/assets/fb3e770a-73ee-44ac-b2b8-2c7869b01d61)
 
 Created the domain controller and named it MARVEL.local
 
