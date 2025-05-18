@@ -61,8 +61,12 @@ Now that we have successfully logged in lets begin the user creation with our sc
 
 ![Act6](https://github.com/user-attachments/assets/5ccde1f4-b6de-472b-9d44-04b1d96d1492)
 <br>
+here is the .ps1 creation file creating the 1000 users all with the Password1.
+<br>
 <br>
 ![Act7](https://github.com/user-attachments/assets/56e68eaa-09de-4a97-8c52-35c8f4dd7632)
+
+Here are the created users from the script.
 
 
 Credits
