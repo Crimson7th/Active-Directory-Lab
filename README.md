@@ -70,4 +70,4 @@ Here are the created users from the script.
 
 
 Credits
-I made this project to revise the Active Directory stuff I learned from PEH Course by @hmaverickadams over 2 years ago.
+I made this project to revise the Active Directory stuff I learned from PEH Course by @hmaverickadams.
