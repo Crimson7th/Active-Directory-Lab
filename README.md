@@ -16,6 +16,8 @@ PowerShell
 The topology of my active direcotory lab for this project -
 
 ![Act](https://github.com/user-attachments/assets/049aa671-34c0-4f11-9141-f3d0133c67ca)
+<br>
+<br>
 
 
 Created the domain controller and named it MARVEL.local
@@ -49,47 +51,19 @@ Now lets login to domain specific Tony Stark account instead of Administrator in
 <br>
 <br>
 <br>
-![Act8](https://github.com/user-attachments/assets/85203b37-8a4e-4540-984f-5a09de550c24)
+
+![Act8](https://github.com/user-attachments/assets/f7aacf2d-bf47-4e38-b198-75b085f5ed0b)
 
 
+<br>
 
-lets begin bulk user addition with our script. I have also added an additional script to add users using a name.txt file. Note that I pasted the code from main machine to server as its advised now to use Browser on the server machine-
+Now that we have successfully logged in lets begin the user creation with our script and also a name.txt file. 
 
- bulk-user-script.mp4 
-Now that we are finished setting up our server machine, we can now install windows 11 (Client11)
+![Act6](https://github.com/user-attachments/assets/5ccde1f4-b6de-472b-9d44-04b1d96d1492)
+<br>
+<br>
+![Act7](https://github.com/user-attachments/assets/56e68eaa-09de-4a97-8c52-35c8f4dd7632)
 
-Note: When we setup Windows 11 on VMWare it asks for encryption on the vm, which is requirement for updated windows so just put a simple password like Password and tick to remember it. We won't be needing this password in our ActiveDirectoryAttacks project.
 
-Details used in windows 11 enterprise installation-
-Enter your name : Client11
-Password : Password12345
-Security Questions : All answers were "bob"
-Privacy settings : off to everything
-First thing to do after login is to install VMWare tools and take snapshot then change computer name to THEPUNISHER and set network adapter to vnet0 and restart -
-
-image
-
-I have set both the machines this way with custom background to easily go back and forth -
-
-image
-
-Take a snapshot of this client machine so if anythings goes wront we can turn back.
-
-image
-
-Remember at this point it is absolutly important to have both machines running. Lets go to our client11 (THEPUNISHER) machine and make it a member of the domain "MARVEL.local" -
-
- joinig-client-to-server.mp4 
-As you can see we got the MARVEL\fcastle on our logon portal -
-
-image
-
-As you can see we can ping domain and access internet -
-
-image
-
-To check the accounts we created via script lets logon to one of them after signing out of fcastle user-
-
- user-confirmation.mp4 
 Credits
 I made this project to revise the Active Directory stuff I learned from PEH Course by @hmaverickadams over 2 years ago.
